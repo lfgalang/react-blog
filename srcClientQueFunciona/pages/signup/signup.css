@@ -1,0 +1,53 @@
+.signup{
+    height: calc(100vh - 50px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(255,255,255,0.3),rgba(255,255,255,0.3)), url("../login/login.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.signupTitle{
+    font-size: 50px;
+}
+
+.signupForm{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.signupForm > label{
+    margin: 10px 0;
+}
+
+.signupInput{
+    padding: 10px;
+    background-color: white;
+    border: 0.5px solid gray;
+    width: 190px;
+}
+
+.signupButton2{
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: rgb(145, 77, 65);
+    border:none;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.loginButton2{
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: rgb(6, 70, 24);
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+}
