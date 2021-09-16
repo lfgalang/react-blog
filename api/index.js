@@ -7,17 +7,21 @@ const usersRoute = require('./routes/users');
 const postsRoute = require('./routes/posts');
 const categoriesRoute = require('./routes/categories');
 const multer = require('multer');
-
+const path = require('path');
 
 
 dotenv.config();
 //Para que deje enviar un json
 app.use(express.json());
+// usando la librería path para ahacer públicos los directorios de las imagenes
+app.use("/images", express.static(path.join(__dirname, "/images")))
+
 
 mongoose.connect(process.env.MONGO_URL,{
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    // useCreateIndex: true
+    // useCreateIndex: true,
+    // useFindAndModify: true,
 }).then(console.log("Conectado a MongoDB")).catch(err=>console.log(err));
 
 const storage = multer.diskStorage({
